@@ -8,10 +8,10 @@
         }
     },
     "require": {
-        "guzzlehttp/guzzle": "^6.2",
+        "guzzlehttp/guzzle": "^7.0",
         "christian-riesen/base32": "^1.3",
         "paragonie/sodium_compat": "^1.0",
-        "phpseclib/phpseclib": "^2.0.6",
+        "phpseclib/phpseclib": "^3.0",
         "symfony/filesystem": "^4.1"
     },
     "license": "MIT",
