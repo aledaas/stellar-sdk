@@ -35,6 +35,7 @@ use Aledaas\StellarSdk\XdrModel\Signer;
 use Aledaas\StellarSdk\XdrModel\SignerKey;
 use Aledaas\StellarSdk\XdrModel\TimeBounds;
 use Aledaas\StellarSdk\XdrModel\TransactionEnvelope;
+use Aledaas\StellarSdk\Asset\Asset;
 
 
 /**
@@ -633,5 +634,22 @@ class TransactionBuilder implements XdrEncodableInterface
     public function build()
     {
         return $this->getTransactionEnvelope();
+    }
+    public function appendPaymentOp(string $destination, string $assetCode, string $issuer, string $amount)
+    {
+        $asset = Asset::newCustomAsset($assetCode, $issuer);
+
+        $paymentOp = new PaymentOp(
+            Keypair::newFromPublicKey($destination)->getMuxedAccount(),
+            $asset,
+            $this->toStroopAmount($amount)
+        );
+
+        $operation = new Operation();
+        $operation->setBody(Operation::bodyFromPaymentOp($paymentOp));
+
+        $this->appendOperation($operation);
+
+        return $this;
     }
 }
