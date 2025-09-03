@@ -1,7 +1,7 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk;
+namespace Aledaas\StellarSdk;
 
 use Base32\Base32;
 use ParagonIE\Sodium\Core\Ed25519;

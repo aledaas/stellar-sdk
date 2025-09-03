@@ -10,7 +10,7 @@ use Aledaas\StellarSdk\XdrModel\Asset;
 /**
  * Fixture data is setup in setup-integration-network.
  *
- * This class assumes access to a private network such as https://github.com/zulucrypto/docker-stellar-integration-test-network
+ * This class assumes access to a private network such as https://github.com/Aledaas/docker-stellar-integration-test-network
  */
 abstract class IntegrationTest extends TestCase
 {
@@ -58,7 +58,7 @@ abstract class IntegrationTest extends TestCase
         // Testnet: Test SDF Network ; September 2015
         $this->networkPassword = getenv('STELLAR_NETWORK_PASSWORD');
         if (!$this->networkPassword) {
-            $this->networkPassword = 'Integration Test Network ; zulucrypto';
+            $this->networkPassword = 'Integration Test Network ; Aledaas';
         }
 
         $this->fixtureAccounts = $this->getFixtureAccounts();
@@ -80,7 +80,7 @@ abstract class IntegrationTest extends TestCase
     }
 
     /**
-     * These are defined by the docker container, see: https://github.com/zulucrypto/docker-stellar-integration-test-network
+     * These are defined by the docker container, see: https://github.com/Aledaas/docker-stellar-integration-test-network
      */
     protected function getFixtureAccounts()
     {

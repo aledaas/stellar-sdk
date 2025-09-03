@@ -1,6 +1,6 @@
 <?php
 
-namespace ZuluCrypto\StellarSdk;
+namespace Aledaas\StellarSdk;
 
 
 use phpseclib3\Math\BigInteger;

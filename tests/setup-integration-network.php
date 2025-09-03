@@ -3,7 +3,7 @@
 /**
  * Sets up the accounts, issuers, assets, etc. on the integration network
  *
- * This script is designed to be run on a private network such as: https://github.com/zulucrypto/docker-stellar-integration-test-network
+ * This script is designed to be run on a private network such as: https://github.com/Aledaas/docker-stellar-integration-test-network
  *
  * Example URL to view path payment from Alice -> Bob for 500 EURTEST:
  *  /paths?destination_account=GALOPAYIVBYBZX3JYUET67WWBDKOOSPYQ2437IKKZCPXXA4HHOKUZ5OA&source_account=GD4JRFLPF4AGYQTLCMZ7Q7DRLGQZQTGWOOKDUCNRVKG66G5ZVYYFT76M&destination_asset_type=credit_alphanum12&destination_asset_code=EURTEST&destination_asset_issuer=GBOCHOYXRJ7JSN22MLEUC6VPYYYWQBY77YEY2FUPJVUZNW2AMAIA5ISC&destination_amount=500
@@ -25,7 +25,7 @@ $horizonBaseUrl = getenv('STELLAR_HORIZON_BASE_URL');
 if (!$horizonBaseUrl) $horizonBaseUrl = 'http://localhost:8000/';
 
 $networkPassphrase = getenv('STELLAR_NETWORK_PASSPHRASE');
-if (!$networkPassphrase) $networkPassphrase = 'Integration Test Network ; zulucrypto';
+if (!$networkPassphrase) $networkPassphrase = 'Integration Test Network ; Aledaas';
 
 $server = Server::customNet($horizonBaseUrl, $networkPassphrase);
 
