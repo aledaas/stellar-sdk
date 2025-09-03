@@ -615,7 +615,7 @@ class TransactionBuilder implements XdrEncodableInterface
     }
    public function setTimeout(int $seconds)
 {
-    $minTime = new \DateTime(); // ahora
+    $minTime = new \DateTime('@0'); // ahora
     $maxTime = new \DateTime();
     $maxTime->modify("+{$seconds} seconds");
 
