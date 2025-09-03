@@ -35,7 +35,6 @@ use Aledaas\StellarSdk\XdrModel\Signer;
 use Aledaas\StellarSdk\XdrModel\SignerKey;
 use Aledaas\StellarSdk\XdrModel\TimeBounds;
 use Aledaas\StellarSdk\XdrModel\TransactionEnvelope;
-use Aledaas\StellarSdk\Asset\Asset as CustomAsset;
 
 
 /**
@@ -628,7 +627,7 @@ class TransactionBuilder implements XdrEncodableInterface
 
     public function appendChangeTrustOp(string $assetCode, string $issuerPublicKey, $amount = null, $sourceAccountId = null)
     {
-        $asset = CustomAsset::newCustomAsset($assetCode, $issuerPublicKey);
+        $asset = Asset::newCustomAsset($assetCode, $issuerPublicKey);
         return $this->addChangeTrustOp($asset, $amount, $sourceAccountId);
     }
     public function build()
