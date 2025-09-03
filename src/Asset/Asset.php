@@ -3,12 +3,12 @@
 namespace Aledaas\StellarSdk\Asset;
 
 use Aledaas\StellarSdk\Xdr\Asset as XdrAsset;
-use Aledaas\StellarSdk\Xdr\AssetType;
-use Aledaas\StellarSdk\Xdr\AlphaNum4;
-use Aledaas\StellarSdk\Xdr\AlphaNum12;
-use Aledaas\StellarSdk\Xdr\AssetCode4;
-use Aledaas\StellarSdk\Xdr\AssetCode12;
-use Aledaas\StellarSdk\Xdr\AccountId;
+use Aledaas\StellarSdk\XdrModel\AssetType;
+use Aledaas\StellarSdk\XdrModel\AlphaNum4;
+use Aledaas\StellarSdk\XdrModel\AlphaNum12;
+use Aledaas\StellarSdk\XdrModel\AssetCode4;
+use Aledaas\StellarSdk\XdrModel\AssetCode12;
+use Aledaas\StellarSdk\XdrModel\AccountId;
 
 class Asset
 {
