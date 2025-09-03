@@ -2,7 +2,7 @@
 
 namespace Aledaas\StellarSdk\Asset;
 
-use Aledaas\StellarSdk\Xdr\Asset as XdrAsset;
+use Aledaas\StellarSdk\XdrModel\Asset as XdrAsset;
 use Aledaas\StellarSdk\XdrModel\AssetType;
 use Aledaas\StellarSdk\XdrModel\AlphaNum4;
 use Aledaas\StellarSdk\XdrModel\AlphaNum12;
