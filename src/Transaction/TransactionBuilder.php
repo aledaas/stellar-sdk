@@ -117,6 +117,8 @@ class TransactionBuilder implements XdrEncodableInterface
      */
     protected $sequenceNumber;
 
+    protected $baseFee = 100;
+
     /**
      * TransactionBuilder constructor.
      *
@@ -231,7 +233,13 @@ class TransactionBuilder implements XdrEncodableInterface
     public function getFee()
     {
         // todo: load base fee from network
-        return 100 * $this->operations->count();
+        return $this->baseFee * $this->operations->count();
+    }
+
+    public function setBaseFee(int $stroops)
+    {
+        $this->baseFee = $stroops;
+        return $this;
     }
 
     /**
@@ -604,5 +612,22 @@ class TransactionBuilder implements XdrEncodableInterface
         $this->memo = $memo;
 
         return $this;
+    }
+    public function setTimeout(int $seconds)
+   {
+        $maxTime = new \DateTime();
+        $maxTime->modify("+{$seconds} seconds");
+        $this->setUpperTimebound($maxTime);
+        return $this;
+    }
+
+    public function appendChangeTrustOp(string $assetCode, string $issuerPublicKey, $amount = null, $sourceAccountId = null)
+    {
+        $asset = Asset::newCustomAsset($assetCode, $issuerPublicKey);
+        return $this->addChangeTrustOp($asset, $amount, $sourceAccountId);
+    }
+    public function build()
+    {
+        return $this->getTransactionEnvelope();
     }
 }
