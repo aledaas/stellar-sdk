@@ -613,13 +613,17 @@ class TransactionBuilder implements XdrEncodableInterface
 
         return $this;
     }
-    public function setTimeout(int $seconds)
-   {
-        $maxTime = new \DateTime();
-        $maxTime->modify("+{$seconds} seconds");
-        $this->setUpperTimebound($maxTime);
-        return $this;
-    }
+   public function setTimeout(int $seconds)
+{
+    $minTime = new \DateTime(); // ahora
+    $maxTime = new \DateTime();
+    $maxTime->modify("+{$seconds} seconds");
+
+    $this->setLowerTimebound($minTime);
+    $this->setUpperTimebound($maxTime);
+
+    return $this;
+}
 
     public function appendChangeTrustOp(string $assetCode, string $issuerPublicKey, $amount = null, $sourceAccountId = null)
     {
