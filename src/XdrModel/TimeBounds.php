@@ -110,7 +110,7 @@ class TimeBounds
      */
     public function getMinTimestamp()
     {
-        return $this->minTime->format('U');
+        return $this->minTime->format('U') ? (int) $this->minTime->format('U') : null;
     }
 
     /**
@@ -118,6 +118,6 @@ class TimeBounds
      */
     public function getMaxTimestamp()
     {
-        return $this->maxTime->format('U');
+        return $this->maxTime->format('U') ? (int) $this->maxTime->format('U') : null;
     }
 }
