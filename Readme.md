@@ -73,11 +73,11 @@ The static `StellarAmount::STROOP_SCALE` property can be used to help with this 
 To install the latest release for usage in your project:
 
 	cd your_project/
-	composer require zulucrypto/stellar-api
+	composer require Aledaas/stellar-api
 
 If you want to work with the most recent development version you can use this repository:
 
-	git clone https://github.com/zulucrypto/stellar-api.git
+	git clone https://github.com/Aledaas/stellar-api.git
 	cd stellar-api/
 	composer install
 

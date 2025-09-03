@@ -24,7 +24,7 @@
     <!-- Default excluded groups -->
     <groups>
         <exclude>
-            <!-- Requires the integration network: https://github.com/zulucrypto/docker-stellar-integration-test-network -->
+            <!-- Requires the integration network: https://github.com/Aledaas/docker-stellar-integration-test-network -->
             <group>requires-integrationnet</group>
             <!-- Requires a hardware wallet. See HardwareWalletIntegrationTest.php -->
             <group>requires-hardwarewallet</group>
