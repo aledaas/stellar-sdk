@@ -1,13 +1,13 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\Unit\XdrModel;
+namespace Aledaas\StellarSdk\Test\Unit\XdrModel;
 
 
 use PHPUnit\Framework\TestCase;
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
-use ZuluCrypto\StellarSdk\XdrModel\Asset;
+use Aledaas\StellarSdk\Keypair;
+use Aledaas\StellarSdk\Xdr\XdrBuffer;
+use Aledaas\StellarSdk\XdrModel\Asset;
 
 class AssetTest extends TestCase
 {

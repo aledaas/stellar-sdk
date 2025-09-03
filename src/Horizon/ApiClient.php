@@ -1,30 +1,30 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Horizon;
+namespace Aledaas\StellarSdk\Horizon;
 
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\ServerException;
-use ZuluCrypto\StellarSdk\Horizon\Api\HorizonResponse;
-use ZuluCrypto\StellarSdk\Horizon\Api\PostTransactionResponse;
-use ZuluCrypto\StellarSdk\Horizon\Exception\HorizonException;
-use ZuluCrypto\StellarSdk\Horizon\Exception\PostTransactionException;
-use ZuluCrypto\StellarSdk\Model\Account;
-use ZuluCrypto\StellarSdk\Model\AccountMergeOperation;
-use ZuluCrypto\StellarSdk\Model\CreateAccountOperation;
-use ZuluCrypto\StellarSdk\Model\Effect;
-use ZuluCrypto\StellarSdk\Model\Ledger;
-use ZuluCrypto\StellarSdk\Model\Operation;
-use ZuluCrypto\StellarSdk\Model\PathPayment;
-use ZuluCrypto\StellarSdk\Model\Payment;
-use ZuluCrypto\StellarSdk\Model\Transaction;
-use ZuluCrypto\StellarSdk\Transaction\TransactionBuilder;
-use ZuluCrypto\StellarSdk\Util\Hash;
-use ZuluCrypto\StellarSdk\Util\Json;
-use ZuluCrypto\StellarSdk\Xdr\XdrEncoder;
-use ZuluCrypto\StellarSdk\XdrModel\TransactionEnvelope;
+use Aledaas\StellarSdk\Horizon\Api\HorizonResponse;
+use Aledaas\StellarSdk\Horizon\Api\PostTransactionResponse;
+use Aledaas\StellarSdk\Horizon\Exception\HorizonException;
+use Aledaas\StellarSdk\Horizon\Exception\PostTransactionException;
+use Aledaas\StellarSdk\Model\Account;
+use Aledaas\StellarSdk\Model\AccountMergeOperation;
+use Aledaas\StellarSdk\Model\CreateAccountOperation;
+use Aledaas\StellarSdk\Model\Effect;
+use Aledaas\StellarSdk\Model\Ledger;
+use Aledaas\StellarSdk\Model\Operation;
+use Aledaas\StellarSdk\Model\PathPayment;
+use Aledaas\StellarSdk\Model\Payment;
+use Aledaas\StellarSdk\Model\Transaction;
+use Aledaas\StellarSdk\Transaction\TransactionBuilder;
+use Aledaas\StellarSdk\Util\Hash;
+use Aledaas\StellarSdk\Util\Json;
+use Aledaas\StellarSdk\Xdr\XdrEncoder;
+use Aledaas\StellarSdk\XdrModel\TransactionEnvelope;
 
 class ApiClient
 {

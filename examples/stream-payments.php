@@ -2,8 +2,8 @@
 
 require '../vendor/autoload.php';
 
-use \ZuluCrypto\StellarSdk\Horizon\ApiClient;
-use \ZuluCrypto\StellarSdk\Model\AssetTransferInterface;
+use \Aledaas\StellarSdk\Horizon\ApiClient;
+use \Aledaas\StellarSdk\Model\AssetTransferInterface;
 
 $client = ApiClient::newPublicClient();
 

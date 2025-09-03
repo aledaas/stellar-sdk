@@ -1,10 +1,10 @@
 <?php
 
-namespace ZuluCrypto\StellarSdk\Test\Unit\Slip0010;
+namespace Aledaas\StellarSdk\Test\Unit\Slip0010;
 
 
 use PHPUnit\Framework\TestCase;
-use ZuluCrypto\StellarSdk\Derivation\HdNode;
+use Aledaas\StellarSdk\Derivation\HdNode;
 
 class HdNodeTest extends TestCase
 {

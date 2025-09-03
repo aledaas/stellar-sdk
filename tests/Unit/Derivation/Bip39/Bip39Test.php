@@ -1,11 +1,11 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\Unit\Derivation\Bip39;
+namespace Aledaas\StellarSdk\Test\Unit\Derivation\Bip39;
 
 
 use PHPUnit\Framework\TestCase;
-use ZuluCrypto\StellarSdk\Derivation\Bip39\Bip39;
+use Aledaas\StellarSdk\Derivation\Bip39\Bip39;
 
 /**
  * Test vectors:

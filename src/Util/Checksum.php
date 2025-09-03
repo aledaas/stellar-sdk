@@ -1,7 +1,7 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Util;
+namespace Aledaas\StellarSdk\Util;
 
 
 /**

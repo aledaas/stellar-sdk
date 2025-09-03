@@ -1,8 +1,8 @@
 <?php
 
-namespace ZuluCrypto\StellarSdk\Model;
+namespace Aledaas\StellarSdk\Model;
 
-use ZuluCrypto\StellarSdk\Horizon\ApiClient;
+use Aledaas\StellarSdk\Horizon\ApiClient;
 
 class RestApiModel
 {

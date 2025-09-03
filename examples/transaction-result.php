@@ -2,9 +2,9 @@
 
 require '../vendor/autoload.php';
 
-use \ZuluCrypto\StellarSdk\Keypair;
-use \ZuluCrypto\StellarSdk\Server;
-use \ZuluCrypto\StellarSdk\Horizon\Exception\PostTransactionException;
+use \Aledaas\StellarSdk\Keypair;
+use \Aledaas\StellarSdk\Server;
+use \Aledaas\StellarSdk\Horizon\Exception\PostTransactionException;
 
 $server = Server::testNet();
 
@@ -24,7 +24,7 @@ $response = $server->buildTransaction($sourceKeypair)
 /*
  * Get information on the overall result of the transaction
  */
-/** @var \ZuluCrypto\StellarSdk\XdrModel\TransactionResult $result */
+/** @var \Aledaas\StellarSdk\XdrModel\TransactionResult $result */
 $result = $response->getResult();
 
 print "Fee charged: " . $result->getFeeCharged()->getScaledValue() . " XLM" . PHP_EOL;

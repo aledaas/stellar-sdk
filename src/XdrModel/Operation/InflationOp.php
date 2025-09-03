@@ -1,7 +1,7 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\XdrModel\Operation;
+namespace Aledaas\StellarSdk\XdrModel\Operation;
 
 
 /**

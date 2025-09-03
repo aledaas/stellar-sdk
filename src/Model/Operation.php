@@ -1,9 +1,9 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Model;
+namespace Aledaas\StellarSdk\Model;
 
-use ZuluCrypto\StellarSdk\XdrModel\Operation\BumpSequenceOp;
+use Aledaas\StellarSdk\XdrModel\Operation\BumpSequenceOp;
 
 
 /**

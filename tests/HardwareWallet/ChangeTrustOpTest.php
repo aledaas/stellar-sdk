@@ -1,14 +1,14 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\HardwareWallet;
+namespace Aledaas\StellarSdk\Test\HardwareWallet;
 
 
-use ZuluCrypto\StellarSdk\Test\Util\HardwareWalletIntegrationTest;
+use Aledaas\StellarSdk\Test\Util\HardwareWalletIntegrationTest;
 use phpseclib3\Math\BigInteger;
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\XdrModel\Asset;
-use ZuluCrypto\StellarSdk\Model\StellarAmount;
+use Aledaas\StellarSdk\Keypair;
+use Aledaas\StellarSdk\XdrModel\Asset;
+use Aledaas\StellarSdk\Model\StellarAmount;
 
 class ChangeTrustOpTest extends HardwareWalletIntegrationTest
 {

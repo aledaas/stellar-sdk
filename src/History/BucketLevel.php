@@ -1,7 +1,7 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\History;
+namespace Aledaas\StellarSdk\History;
 
 
 /**

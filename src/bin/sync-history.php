@@ -9,7 +9,7 @@
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 
-use \ZuluCrypto\StellarSdk\History\HttpHistoryArchive;
+use \Aledaas\StellarSdk\History\HttpHistoryArchive;
 
 // Root URL of the history archive
 $sourceArchiveUrl = $argv[1];

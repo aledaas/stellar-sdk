@@ -1,11 +1,11 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\Integration;
+namespace Aledaas\StellarSdk\Test\Integration;
 
 
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\Test\Util\IntegrationTest;
+use Aledaas\StellarSdk\Keypair;
+use Aledaas\StellarSdk\Test\Util\IntegrationTest;
 
 class CreateAccountOpTest extends IntegrationTest
 {

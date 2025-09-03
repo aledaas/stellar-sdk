@@ -1,10 +1,10 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\XdrModel;
+namespace Aledaas\StellarSdk\XdrModel;
 
 
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
+use Aledaas\StellarSdk\Xdr\XdrBuffer;
 
 class PaymentResult extends OperationResult
 {

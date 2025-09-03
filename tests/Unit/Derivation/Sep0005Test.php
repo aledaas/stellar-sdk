@@ -1,13 +1,13 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\Unit\Slip0010;
+namespace Aledaas\StellarSdk\Test\Unit\Slip0010;
 
 
 use PHPUnit\Framework\TestCase;
-use ZuluCrypto\StellarSdk\Derivation\Bip39\Bip39;
-use ZuluCrypto\StellarSdk\Derivation\HdNode;
-use ZuluCrypto\StellarSdk\Keypair;
+use Aledaas\StellarSdk\Derivation\Bip39\Bip39;
+use Aledaas\StellarSdk\Derivation\HdNode;
+use Aledaas\StellarSdk\Keypair;
 
 /**
  * Tests compatibility with SEP-0005

@@ -1,9 +1,9 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\History;
+namespace Aledaas\StellarSdk\History;
 
-use ZuluCrypto\StellarSdk\Util\Json;
+use Aledaas\StellarSdk\Util\Json;
 
 
 /**

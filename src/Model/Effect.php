@@ -1,7 +1,7 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Model;
+namespace Aledaas\StellarSdk\Model;
 
 /**
  * See: https://www.stellar.org/developers/horizon/reference/resources/effect.html

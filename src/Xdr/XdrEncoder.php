@@ -1,10 +1,10 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Xdr;
+namespace Aledaas\StellarSdk\Xdr;
 
 use phpseclib3\Math\BigInteger;
-use ZuluCrypto\StellarSdk\Xdr\Iface\XdrEncodableInterface;
+use Aledaas\StellarSdk\Xdr\Iface\XdrEncodableInterface;
 
 
 /**

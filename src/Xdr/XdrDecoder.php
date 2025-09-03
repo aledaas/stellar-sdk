@@ -1,10 +1,10 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Xdr;
+namespace Aledaas\StellarSdk\Xdr;
 
 
-use ZuluCrypto\StellarSdk\Util\MathSafety;
+use Aledaas\StellarSdk\Util\MathSafety;
 
 class XdrDecoder
 {

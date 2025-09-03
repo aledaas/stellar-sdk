@@ -1,12 +1,12 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Model;
+namespace Aledaas\StellarSdk\Model;
 
 
 use phpseclib3\Math\BigInteger;
-use ZuluCrypto\StellarSdk\Util\MathSafety;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
+use Aledaas\StellarSdk\Util\MathSafety;
+use Aledaas\StellarSdk\Xdr\XdrBuffer;
 
 /**
  * Helper class for working with stellar values

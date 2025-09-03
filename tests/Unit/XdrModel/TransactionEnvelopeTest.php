@@ -1,12 +1,12 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\Unit\XdrModel;
+namespace Aledaas\StellarSdk\Test\Unit\XdrModel;
 
 
 use PHPUnit\Framework\TestCase;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
-use ZuluCrypto\StellarSdk\XdrModel\TransactionEnvelope;
+use Aledaas\StellarSdk\Xdr\XdrBuffer;
+use Aledaas\StellarSdk\XdrModel\TransactionEnvelope;
 
 class TransactionEnvelopeTest extends TestCase
 {

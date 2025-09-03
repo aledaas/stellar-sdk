@@ -1,7 +1,7 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Horizon\Exception;
+namespace Aledaas\StellarSdk\Horizon\Exception;
 
 
 use GuzzleHttp\Exception\ClientException;

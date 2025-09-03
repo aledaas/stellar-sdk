@@ -1,12 +1,12 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\XdrModel;
+namespace Aledaas\StellarSdk\XdrModel;
 
 
 use phpseclib3\Math\BigInteger;
-use ZuluCrypto\StellarSdk\Model\StellarAmount;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
+use Aledaas\StellarSdk\Model\StellarAmount;
+use Aledaas\StellarSdk\Xdr\XdrBuffer;
 
 class OfferEntry
 {

@@ -1,12 +1,12 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\XdrModel\Operation;
+namespace Aledaas\StellarSdk\XdrModel\Operation;
 
 
-use ZuluCrypto\StellarSdk\Util\Debug;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
-use ZuluCrypto\StellarSdk\Xdr\XdrEncoder;
+use Aledaas\StellarSdk\Util\Debug;
+use Aledaas\StellarSdk\Xdr\XdrBuffer;
+use Aledaas\StellarSdk\Xdr\XdrEncoder;
 
 /**
  * https://github.com/stellar/stellar-core/blob/master/src/xdr/Stellar-transaction.x#L218

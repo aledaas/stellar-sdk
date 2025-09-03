@@ -1,13 +1,13 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\Integration;
+namespace Aledaas\StellarSdk\Test\Integration;
 
 
-use ZuluCrypto\StellarSdk\Test\Util\IntegrationTest;
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\XdrModel\Asset;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\PathPaymentOp;
+use Aledaas\StellarSdk\Test\Util\IntegrationTest;
+use Aledaas\StellarSdk\Keypair;
+use Aledaas\StellarSdk\XdrModel\Asset;
+use Aledaas\StellarSdk\XdrModel\Operation\PathPaymentOp;
 
 class PathPaymentOpTest extends IntegrationTest
 {
@@ -17,7 +17,7 @@ class PathPaymentOpTest extends IntegrationTest
      * todo: integrate this with payment path discovery in Horizon
      *
      * @group requires-integrationnet
-     * @throws \ZuluCrypto\StellarSdk\Horizon\Exception\HorizonException
+     * @throws \Aledaas\StellarSdk\Horizon\Exception\HorizonException
      * @throws \ErrorException
      */
     public function testSingleStepPathPayment()

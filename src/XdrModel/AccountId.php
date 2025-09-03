@@ -1,13 +1,13 @@
 <?php
 
-namespace ZuluCrypto\StellarSdk\XdrModel;
+namespace Aledaas\StellarSdk\XdrModel;
 
-use ZuluCrypto\StellarSdk\AddressableKey;
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\Xdr\Iface\XdrEncodableInterface;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
-use ZuluCrypto\StellarSdk\Xdr\XdrDecoder;
-use ZuluCrypto\StellarSdk\Xdr\XdrEncoder;
+use Aledaas\StellarSdk\AddressableKey;
+use Aledaas\StellarSdk\Keypair;
+use Aledaas\StellarSdk\Xdr\Iface\XdrEncodableInterface;
+use Aledaas\StellarSdk\Xdr\XdrBuffer;
+use Aledaas\StellarSdk\Xdr\XdrDecoder;
+use Aledaas\StellarSdk\Xdr\XdrEncoder;
 
 /**
  * This is the same thing as a PublicKey

@@ -1,16 +1,16 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Model;
+namespace Aledaas\StellarSdk\Model;
 
 
 use phpseclib3\Math\BigInteger;
-use ZuluCrypto\StellarSdk\Horizon\Api\HorizonResponse;
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\Transaction\TransactionBuilder;
-use ZuluCrypto\StellarSdk\Util\MathSafety;
-use ZuluCrypto\StellarSdk\XdrModel\Asset;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\PaymentOp;
+use Aledaas\StellarSdk\Horizon\Api\HorizonResponse;
+use Aledaas\StellarSdk\Keypair;
+use Aledaas\StellarSdk\Transaction\TransactionBuilder;
+use Aledaas\StellarSdk\Util\MathSafety;
+use Aledaas\StellarSdk\XdrModel\Asset;
+use Aledaas\StellarSdk\XdrModel\Operation\PaymentOp;
 
 /**
  * See: https://www.stellar.org/developers/horizon/reference/resources/account.html
@@ -194,7 +194,7 @@ class Account extends RestApiModel
      * @param null $sinceCursor
      * @param int  $limit
      * @return array
-     * @throws \ZuluCrypto\StellarSdk\Horizon\Exception\HorizonException
+     * @throws \Aledaas\StellarSdk\Horizon\Exception\HorizonException
      */
     public function getEffects($sinceCursor = null, $limit = 50)
     {

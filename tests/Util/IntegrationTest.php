@@ -1,11 +1,11 @@
 <?php
 
-namespace ZuluCrypto\StellarSdk\Test\Util;
+namespace Aledaas\StellarSdk\Test\Util;
 
 use PHPUnit\Framework\TestCase;
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\Server;
-use ZuluCrypto\StellarSdk\XdrModel\Asset;
+use Aledaas\StellarSdk\Keypair;
+use Aledaas\StellarSdk\Server;
+use Aledaas\StellarSdk\XdrModel\Asset;
 
 /**
  * Fixture data is setup in setup-integration-network.
@@ -69,7 +69,7 @@ abstract class IntegrationTest extends TestCase
 
     /**
      * @return Keypair
-     * @throws \ZuluCrypto\StellarSdk\Horizon\Exception\HorizonException
+     * @throws \Aledaas\StellarSdk\Horizon\Exception\HorizonException
      */
     protected function getRandomFundedKeypair()
     {

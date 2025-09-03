@@ -1,19 +1,19 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\Integration;
+namespace Aledaas\StellarSdk\Test\Integration;
 
 
-use ZuluCrypto\StellarSdk\Horizon\Exception\PostTransactionException;
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\Test\Util\IntegrationTest;
-use ZuluCrypto\StellarSdk\XdrModel\Asset;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\InflationOp;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\ManageDataOp;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\ManageOfferOp;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\PathPaymentOp;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\SetOptionsOp;
-use ZuluCrypto\StellarSdk\XdrModel\Price;
+use Aledaas\StellarSdk\Horizon\Exception\PostTransactionException;
+use Aledaas\StellarSdk\Keypair;
+use Aledaas\StellarSdk\Test\Util\IntegrationTest;
+use Aledaas\StellarSdk\XdrModel\Asset;
+use Aledaas\StellarSdk\XdrModel\Operation\InflationOp;
+use Aledaas\StellarSdk\XdrModel\Operation\ManageDataOp;
+use Aledaas\StellarSdk\XdrModel\Operation\ManageOfferOp;
+use Aledaas\StellarSdk\XdrModel\Operation\PathPaymentOp;
+use Aledaas\StellarSdk\XdrModel\Operation\SetOptionsOp;
+use Aledaas\StellarSdk\XdrModel\Price;
 
 class TransactionBuilderTest extends IntegrationTest
 {

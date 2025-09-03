@@ -1,13 +1,13 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\HardwareWallet;
+namespace Aledaas\StellarSdk\Test\HardwareWallet;
 
 
-use ZuluCrypto\StellarSdk\Test\Util\HardwareWalletIntegrationTest;
+use Aledaas\StellarSdk\Test\Util\HardwareWalletIntegrationTest;
 use phpseclib3\Math\BigInteger;
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\Util\Debug;
+use Aledaas\StellarSdk\Keypair;
+use Aledaas\StellarSdk\Util\Debug;
 
 class ManageDataOpTest extends HardwareWalletIntegrationTest
 {

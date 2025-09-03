@@ -1,10 +1,10 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Derivation;
+namespace Aledaas\StellarSdk\Derivation;
 
 
-use ZuluCrypto\StellarSdk\Util\MathSafety;
+use Aledaas\StellarSdk\Util\MathSafety;
 
 /**
  * A Hierarchical Deterministic node for use with Stellar

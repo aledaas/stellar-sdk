@@ -7,8 +7,8 @@
 
 require '../vendor/autoload.php';
 
-use \ZuluCrypto\StellarSdk\Keypair;
-use \ZuluCrypto\StellarSdk\Server;
+use \Aledaas\StellarSdk\Keypair;
+use \Aledaas\StellarSdk\Server;
 use \phpseclib\Math\BigInteger;
 
 

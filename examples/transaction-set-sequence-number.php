@@ -4,10 +4,10 @@ require '../vendor/autoload.php';
 
 use \phpseclib\Math\BigInteger;
 
-use \ZuluCrypto\StellarSdk\Keypair;
-use \ZuluCrypto\StellarSdk\Server;
-use \ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
-use \ZuluCrypto\StellarSdk\XdrModel\TransactionEnvelope;
+use \Aledaas\StellarSdk\Keypair;
+use \Aledaas\StellarSdk\Server;
+use \Aledaas\StellarSdk\Xdr\XdrBuffer;
+use \Aledaas\StellarSdk\XdrModel\TransactionEnvelope;
 
 // GD4JRFLPF4AGYQTLCMZ7Q7DRLGQZQTGWOOKDUCNRVKG66G5ZVYYFT76M
 $sourceKeypair = Keypair::newFromSeed('SAA2U5UFW65DW3MLVX734BUQIHAWANQNBLTFT47X2NVVBCN7X6QC5AOG');

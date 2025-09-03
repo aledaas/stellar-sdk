@@ -1,16 +1,16 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\Integration;
+namespace Aledaas\StellarSdk\Test\Integration;
 
 
-use ZuluCrypto\StellarSdk\Test\Util\IntegrationTest;
+use Aledaas\StellarSdk\Test\Util\IntegrationTest;
 
 class ChangeTrustOpTest extends IntegrationTest
 {
     /**
      * @group requires-integrationnet
-     * @throws \ZuluCrypto\StellarSdk\Horizon\Exception\HorizonException
+     * @throws \Aledaas\StellarSdk\Horizon\Exception\HorizonException
      * @throws \ErrorException
      */
     public function testAddAndRemoveTrust()

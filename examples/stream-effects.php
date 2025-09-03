@@ -2,8 +2,8 @@
 
 require '../vendor/autoload.php';
 
-use \ZuluCrypto\StellarSdk\Horizon\ApiClient;
-use \ZuluCrypto\StellarSdk\Model\Effect;
+use \Aledaas\StellarSdk\Horizon\ApiClient;
+use \Aledaas\StellarSdk\Model\Effect;
 
 $client = ApiClient::newPublicClient();
 

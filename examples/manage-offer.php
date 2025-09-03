@@ -2,9 +2,9 @@
 
 require '../vendor/autoload.php';
 
-use \ZuluCrypto\StellarSdk\Keypair;
-use \ZuluCrypto\StellarSdk\Server;
-use \ZuluCrypto\StellarSdk\XdrModel\Asset;
+use \Aledaas\StellarSdk\Keypair;
+use \Aledaas\StellarSdk\Server;
+use \Aledaas\StellarSdk\XdrModel\Asset;
 
 $server = Server::testNet();
 
@@ -20,11 +20,11 @@ $nativeAsset = Asset::newNativeAsset();
 // Offer 5,000 XLM @ 100 XLM per 1 USDTEST
 $server->buildTransaction($offeringKeypair->getPublicKey())
     ->addOperation(
-        new \ZuluCrypto\StellarSdk\XdrModel\Operation\ManageOfferOp(
+        new \Aledaas\StellarSdk\XdrModel\Operation\ManageOfferOp(
             $usdtestAsset,
             $nativeAsset,
             5000,
-            new \ZuluCrypto\StellarSdk\XdrModel\Price(100, 1)
+            new \Aledaas\StellarSdk\XdrModel\Price(100, 1)
         )
     )
     ->submit($offeringKeypair->getSecret());
@@ -32,11 +32,11 @@ $server->buildTransaction($offeringKeypair->getPublicKey())
 // Passive offer of 1,000 XLM @ 50 XLM per 1 USDTEST
 $server->buildTransaction($offeringKeypair->getPublicKey())
     ->addOperation(
-        new \ZuluCrypto\StellarSdk\XdrModel\Operation\CreatePassiveOfferOp(
+        new \Aledaas\StellarSdk\XdrModel\Operation\CreatePassiveOfferOp(
             $usdtestAsset,
             $nativeAsset,
             1000,
-            new \ZuluCrypto\StellarSdk\XdrModel\Price(50, 1)
+            new \Aledaas\StellarSdk\XdrModel\Price(50, 1)
         )
     )
     ->submit($offeringKeypair->getSecret());

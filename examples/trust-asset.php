@@ -2,10 +2,10 @@
 
 require '../vendor/autoload.php';
 
-use \ZuluCrypto\StellarSdk\Keypair;
-use \ZuluCrypto\StellarSdk\Server;
-use \ZuluCrypto\StellarSdk\XdrModel\Asset;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\SetOptionsOp;
+use \Aledaas\StellarSdk\Keypair;
+use \Aledaas\StellarSdk\Server;
+use \Aledaas\StellarSdk\XdrModel\Asset;
+use Aledaas\StellarSdk\XdrModel\Operation\SetOptionsOp;
 
 $server = Server::testNet();
 
