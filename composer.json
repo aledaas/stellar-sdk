@@ -1,5 +1,5 @@
 {
-    "name": "aledaas/stellar-api",
+    "name": "aledaas/stellar-sdk",
     "description": "API client for the Stellar network",
     "autoload": {
         "psr-4": {
@@ -17,8 +17,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Zulu Crypto",
-            "email": "zulucrypto@protonmail.com"
+            "name": "Aledaas",
+            "email": "aledaas@gmail.com"
         }
     ],
     "require-dev": {
