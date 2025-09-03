@@ -635,21 +635,16 @@ class TransactionBuilder implements XdrEncodableInterface
     {
         return $this->getTransactionEnvelope();
     }
-    public function appendPaymentOp(string $destination, string $assetCode, string $issuer, string $amount)
+    public function appendPayment(string $destination, string $assetCode, string $issuer, string $amount, $sourceAccountId = null)
     {
-        $asset = Asset::newCustomAsset($assetCode, $issuer);
-
-        $paymentOp = new PaymentOp(
-            Keypair::newFromPublicKey($destination)->getMuxedAccount(),
-            $asset,
-            $this->toStroopAmount($amount)
+        $paymentOp = PaymentOp::newCustomPayment(
+            $destination,
+            $this->toStroopAmount($amount),
+            $assetCode,
+            $issuer,
+            $sourceAccountId
         );
 
-        $operation = new Operation();
-        $operation->setBody(Operation::bodyFromPaymentOp($paymentOp));
-
-        $this->appendOperation($operation);
-
-        return $this;
+        return $this->addOperation($paymentOp);
     }
 }
