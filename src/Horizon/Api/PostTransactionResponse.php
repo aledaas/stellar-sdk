@@ -1,11 +1,11 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Horizon\Api;
+namespace Aledaas\StellarSdk\Horizon\Api;
 
 
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
-use ZuluCrypto\StellarSdk\XdrModel\TransactionResult;
+use Aledaas\StellarSdk\Xdr\XdrBuffer;
+use Aledaas\StellarSdk\XdrModel\TransactionResult;
 
 class PostTransactionResponse extends HorizonResponse
 {

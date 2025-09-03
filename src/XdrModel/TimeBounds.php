@@ -1,12 +1,12 @@
 <?php
 
-namespace ZuluCrypto\StellarSdk\XdrModel;
+namespace Aledaas\StellarSdk\XdrModel;
 
 
-use ZuluCrypto\StellarSdk\AddressableKey;
-use ZuluCrypto\StellarSdk\Util\MathSafety;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
-use ZuluCrypto\StellarSdk\Xdr\XdrEncoder;
+use Aledaas\StellarSdk\AddressableKey;
+use Aledaas\StellarSdk\Util\MathSafety;
+use Aledaas\StellarSdk\Xdr\XdrBuffer;
+use Aledaas\StellarSdk\Xdr\XdrEncoder;
 
 /**
  * Represents a time range

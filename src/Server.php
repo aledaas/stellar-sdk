@@ -5,12 +5,12 @@ namespace ZuluCrypto\StellarSdk;
 
 use phpseclib3\Math\BigInteger;
 use Prophecy\Exception\InvalidArgumentException;
-use ZuluCrypto\StellarSdk\Horizon\ApiClient;
-use ZuluCrypto\StellarSdk\Horizon\Exception\HorizonException;
-use ZuluCrypto\StellarSdk\Model\Account;
-use ZuluCrypto\StellarSdk\Model\Payment;
-use ZuluCrypto\StellarSdk\Signing\SigningInterface;
-use ZuluCrypto\StellarSdk\Transaction\TransactionBuilder;
+use Aledaas\StellarSdk\Horizon\ApiClient;
+use Aledaas\StellarSdk\Horizon\Exception\HorizonException;
+use Aledaas\StellarSdk\Model\Account;
+use Aledaas\StellarSdk\Model\Payment;
+use Aledaas\StellarSdk\Signing\SigningInterface;
+use Aledaas\StellarSdk\Transaction\TransactionBuilder;
 
 class Server
 {

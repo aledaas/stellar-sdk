@@ -2,9 +2,9 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\Server;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\PaymentOp;
+use Aledaas\StellarSdk\Keypair;
+use Aledaas\StellarSdk\Server;
+use Aledaas\StellarSdk\XdrModel\Operation\PaymentOp;
 
 $server = Server::testNet();
 
@@ -19,7 +19,7 @@ $destinationAccountId = 'GA2C5RFPE6GCKMY3US5PAB6UZLKIGSPIUKSLRB6Q723BM2OARMDUYEJ
 $destinationAccount = $server->getAccount($destinationAccountId);
 
 // Build the payment transaction
-$transaction = \ZuluCrypto\StellarSdk\Server::testNet()
+$transaction = \Aledaas\StellarSdk\Server::testNet()
     ->buildTransaction($sourceKeypair->getPublicKey())
     ->addOperation(
         PaymentOp::newNativePayment($destinationAccountId, 1)

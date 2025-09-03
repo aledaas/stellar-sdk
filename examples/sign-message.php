@@ -5,7 +5,7 @@
 
 require '../vendor/autoload.php';
 
-use \ZuluCrypto\StellarSdk\Keypair;
+use \Aledaas\StellarSdk\Keypair;
 
 $message = 'test stellar message';
 

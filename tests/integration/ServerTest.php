@@ -1,11 +1,11 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\Integration;
+namespace Aledaas\StellarSdk\Test\Integration;
 
 
-use ZuluCrypto\StellarSdk\Server;
-use ZuluCrypto\StellarSdk\Test\Util\IntegrationTest;
+use Aledaas\StellarSdk\Server;
+use Aledaas\StellarSdk\Test\Util\IntegrationTest;
 
 
 class ServerTest extends IntegrationTest

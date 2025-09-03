@@ -5,9 +5,9 @@ namespace ZuluCrypto\StellarSdk;
 
 
 use ParagonIE\Sodium\Core\Ed25519;
-use ZuluCrypto\StellarSdk\Derivation\Bip39\Bip39;
-use ZuluCrypto\StellarSdk\Derivation\HdNode;
-use ZuluCrypto\StellarSdk\XdrModel\DecoratedSignature;
+use Aledaas\StellarSdk\Derivation\Bip39\Bip39;
+use Aledaas\StellarSdk\Derivation\HdNode;
+use Aledaas\StellarSdk\XdrModel\DecoratedSignature;
 
 /**
  * A public/private keypair for use with the Stellar network

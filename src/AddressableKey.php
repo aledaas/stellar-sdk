@@ -5,8 +5,8 @@ namespace ZuluCrypto\StellarSdk;
 
 use Base32\Base32;
 use ParagonIE\Sodium\Core\Ed25519;
-use ZuluCrypto\StellarSdk\Util\Checksum;
-use ZuluCrypto\StellarSdk\Util\Debug;
+use Aledaas\StellarSdk\Util\Checksum;
+use Aledaas\StellarSdk\Util\Debug;
 
 
 /**

@@ -1,19 +1,19 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\XdrModel;
+namespace Aledaas\StellarSdk\XdrModel;
 
 
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\Server;
-use ZuluCrypto\StellarSdk\Transaction\Transaction;
-use ZuluCrypto\StellarSdk\Transaction\TransactionBuilder;
-use ZuluCrypto\StellarSdk\Util\Debug;
-use ZuluCrypto\StellarSdk\Util\Hash;
-use ZuluCrypto\StellarSdk\Xdr\Iface\XdrEncodableInterface;
-use ZuluCrypto\StellarSdk\Xdr\Type\VariableArray;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
-use ZuluCrypto\StellarSdk\Xdr\XdrEncoder;
+use Aledaas\StellarSdk\Keypair;
+use Aledaas\StellarSdk\Server;
+use Aledaas\StellarSdk\Transaction\Transaction;
+use Aledaas\StellarSdk\Transaction\TransactionBuilder;
+use Aledaas\StellarSdk\Util\Debug;
+use Aledaas\StellarSdk\Util\Hash;
+use Aledaas\StellarSdk\Xdr\Iface\XdrEncodableInterface;
+use Aledaas\StellarSdk\Xdr\Type\VariableArray;
+use Aledaas\StellarSdk\Xdr\XdrBuffer;
+use Aledaas\StellarSdk\Xdr\XdrEncoder;
 
 class TransactionEnvelope implements XdrEncodableInterface
 {

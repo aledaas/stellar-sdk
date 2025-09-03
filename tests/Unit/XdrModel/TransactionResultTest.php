@@ -1,13 +1,13 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\Unit\XdrModel;
+namespace Aledaas\StellarSdk\Test\Unit\XdrModel;
 
 
 use PHPUnit\Framework\TestCase;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
-use ZuluCrypto\StellarSdk\XdrModel\PaymentResult;
-use ZuluCrypto\StellarSdk\XdrModel\TransactionResult;
+use Aledaas\StellarSdk\Xdr\XdrBuffer;
+use Aledaas\StellarSdk\XdrModel\PaymentResult;
+use Aledaas\StellarSdk\XdrModel\TransactionResult;
 
 class TransactionResultTest extends TestCase
 {

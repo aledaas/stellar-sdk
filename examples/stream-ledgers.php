@@ -2,8 +2,8 @@
 
 require '../vendor/autoload.php';
 
-use \ZuluCrypto\StellarSdk\Horizon\ApiClient;
-use \ZuluCrypto\StellarSdk\Model\Ledger;
+use \Aledaas\StellarSdk\Horizon\ApiClient;
+use \Aledaas\StellarSdk\Model\Ledger;
 
 $client = ApiClient::newPublicClient();
 

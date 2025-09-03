@@ -1,19 +1,19 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\Integration;
+namespace Aledaas\StellarSdk\Test\Integration;
 
 
-use ZuluCrypto\StellarSdk\Test\Util\IntegrationTest;
-use ZuluCrypto\StellarSdk\XdrModel\Asset;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\CreatePassiveOfferOp;
-use ZuluCrypto\StellarSdk\XdrModel\Price;
+use Aledaas\StellarSdk\Test\Util\IntegrationTest;
+use Aledaas\StellarSdk\XdrModel\Asset;
+use Aledaas\StellarSdk\XdrModel\Operation\CreatePassiveOfferOp;
+use Aledaas\StellarSdk\XdrModel\Price;
 
 class CreatePassiveOfferOpTest extends IntegrationTest
 {
     /**
      * @group requires-integrationnet
-     * @throws \ZuluCrypto\StellarSdk\Horizon\Exception\HorizonException
+     * @throws \Aledaas\StellarSdk\Horizon\Exception\HorizonException
      * @throws \ErrorException
      */
     public function testSubmitPassiveOffer()

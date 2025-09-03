@@ -1,7 +1,7 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Xdr\Iface;
+namespace Aledaas\StellarSdk\Xdr\Iface;
 
 
 interface XdrEncodableInterface

@@ -2,7 +2,7 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use ZuluCrypto\StellarSdk\Server;
+use Aledaas\StellarSdk\Server;
 
 $server = Server::testNet();
 
@@ -15,7 +15,7 @@ while (true) {
 
     $seenResults = 0;
     foreach ($payments as $payment) {
-        /** @var $payment \ZuluCrypto\StellarSdk\Model\Operation|\ZuluCrypto\StellarSdk\Model\AssetTransferInterface */
+        /** @var $payment \Aledaas\StellarSdk\Model\Operation|\Aledaas\StellarSdk\Model\AssetTransferInterface */
         // If the same cursor shows up twice, we're repeating results and should exit
         if ($payment->getPagingToken() == $currentCursor) break 2;
 

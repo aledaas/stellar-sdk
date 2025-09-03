@@ -1,11 +1,11 @@
 <?php
 
-namespace ZuluCrypto\StellarSdk\XdrModel;
+namespace Aledaas\StellarSdk\XdrModel;
 
 
-use ZuluCrypto\StellarSdk\Util\Debug;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
-use ZuluCrypto\StellarSdk\Xdr\XdrEncoder;
+use Aledaas\StellarSdk\Util\Debug;
+use Aledaas\StellarSdk\Xdr\XdrBuffer;
+use Aledaas\StellarSdk\Xdr\XdrEncoder;
 
 /**
  *

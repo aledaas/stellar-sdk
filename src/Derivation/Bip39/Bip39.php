@@ -1,10 +1,10 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Derivation\Bip39;
+namespace Aledaas\StellarSdk\Derivation\Bip39;
 
 
-use ZuluCrypto\StellarSdk\Util\Debug;
+use Aledaas\StellarSdk\Util\Debug;
 
 /**
  * Minimal BIP-39 implementation (only what's necessary to generate seeds for

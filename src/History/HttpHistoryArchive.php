@@ -1,12 +1,12 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\History;
+namespace Aledaas\StellarSdk\History;
 
 
 use GuzzleHttp\Client;
 use Symfony\Component\Filesystem\Filesystem;
-use ZuluCrypto\StellarSdk\Util\Json;
+use Aledaas\StellarSdk\Util\Json;
 
 /**
  * Manages downloading from a HTTP history archive

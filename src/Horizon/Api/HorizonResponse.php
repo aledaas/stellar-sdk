@@ -1,7 +1,7 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Horizon\Api;
+namespace Aledaas\StellarSdk\Horizon\Api;
 
 
 class HorizonResponse

@@ -1,20 +1,20 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\Integration;
+namespace Aledaas\StellarSdk\Test\Integration;
 
 
 use phpseclib3\Math\BigInteger;
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\Model\StellarAmount;
-use ZuluCrypto\StellarSdk\Test\Util\IntegrationTest;
-use ZuluCrypto\StellarSdk\XdrModel\Asset;
+use Aledaas\StellarSdk\Keypair;
+use Aledaas\StellarSdk\Model\StellarAmount;
+use Aledaas\StellarSdk\Test\Util\IntegrationTest;
+use Aledaas\StellarSdk\XdrModel\Asset;
 
 class PaymentOpTest extends IntegrationTest
 {
     /**
      * @group requires-integrationnet
-     * @throws \ZuluCrypto\StellarSdk\Horizon\Exception\HorizonException
+     * @throws \Aledaas\StellarSdk\Horizon\Exception\HorizonException
      * @throws \ErrorException
      */
     public function testNativePayment()
@@ -45,7 +45,7 @@ class PaymentOpTest extends IntegrationTest
      * See test for an example
      *
      * @group requires-integrationnet
-     * @throws \ZuluCrypto\StellarSdk\Horizon\Exception\HorizonException
+     * @throws \Aledaas\StellarSdk\Horizon\Exception\HorizonException
      * @throws \ErrorException
      */
     public function testCustomAssetPayment()
@@ -92,7 +92,7 @@ class PaymentOpTest extends IntegrationTest
 
     /**
      * @group requires-integrationnet
-     * @throws \ZuluCrypto\StellarSdk\Horizon\Exception\HorizonException
+     * @throws \Aledaas\StellarSdk\Horizon\Exception\HorizonException
      * @throws \ErrorException
      */
     public function testLargestCustomAssetPayment()

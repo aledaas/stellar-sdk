@@ -1,13 +1,13 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\Unit\Xdr;
+namespace Aledaas\StellarSdk\Test\Unit\Xdr;
 
 
 use phpseclib3\Math\BigInteger;
 use PHPUnit\Framework\TestCase;
-use ZuluCrypto\StellarSdk\Util\Debug;
-use ZuluCrypto\StellarSdk\Xdr\XdrEncoder;
+use Aledaas\StellarSdk\Util\Debug;
+use Aledaas\StellarSdk\Xdr\XdrEncoder;
 
 class XdrEncoderTest extends TestCase
 {

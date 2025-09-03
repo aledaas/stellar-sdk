@@ -1,12 +1,12 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\Unit\Model;
+namespace Aledaas\StellarSdk\Test\Unit\Model;
 
 
 use phpseclib3\Math\BigInteger;
 use PHPUnit\Framework\TestCase;
-use ZuluCrypto\StellarSdk\Model\StellarAmount;
+use Aledaas\StellarSdk\Model\StellarAmount;
 
 class StellarAmountTest extends TestCase
 {

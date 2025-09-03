@@ -13,12 +13,12 @@
 require_once(__DIR__ . '/../vendor/autoload.php');
 
 
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\XdrModel\Asset;
-use ZuluCrypto\StellarSdk\Server;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\ManageOfferOp;
-use ZuluCrypto\StellarSdk\XdrModel\Price;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\SetOptionsOp;
+use Aledaas\StellarSdk\Keypair;
+use Aledaas\StellarSdk\XdrModel\Asset;
+use Aledaas\StellarSdk\Server;
+use Aledaas\StellarSdk\XdrModel\Operation\ManageOfferOp;
+use Aledaas\StellarSdk\XdrModel\Price;
+use Aledaas\StellarSdk\XdrModel\Operation\SetOptionsOp;
 
 
 $horizonBaseUrl = getenv('STELLAR_HORIZON_BASE_URL');
@@ -141,7 +141,7 @@ $server->buildTransaction($jpyBankKeypair)
  *
  * @param $secretKey
  * @return Keypair
- * @throws \ZuluCrypto\StellarSdk\Horizon\Exception\HorizonException
+ * @throws \Aledaas\StellarSdk\Horizon\Exception\HorizonException
  */
 function setupKeypair($secretKey)
 {

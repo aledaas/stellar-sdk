@@ -1,16 +1,16 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\HardwareWallet;
+namespace Aledaas\StellarSdk\Test\HardwareWallet;
 
 
-use ZuluCrypto\StellarSdk\Test\Util\HardwareWalletIntegrationTest;
+use Aledaas\StellarSdk\Test\Util\HardwareWalletIntegrationTest;
 use phpseclib3\Math\BigInteger;
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\Util\Debug;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\SetOptionsOp;
-use ZuluCrypto\StellarSdk\XdrModel\Signer;
-use ZuluCrypto\StellarSdk\XdrModel\SignerKey;
+use Aledaas\StellarSdk\Keypair;
+use Aledaas\StellarSdk\Util\Debug;
+use Aledaas\StellarSdk\XdrModel\Operation\SetOptionsOp;
+use Aledaas\StellarSdk\XdrModel\Signer;
+use Aledaas\StellarSdk\XdrModel\SignerKey;
 
 class SetOptionsOpTest extends HardwareWalletIntegrationTest
 {

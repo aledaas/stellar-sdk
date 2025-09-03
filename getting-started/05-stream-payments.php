@@ -2,8 +2,8 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use ZuluCrypto\StellarSdk\Server;
-use ZuluCrypto\StellarSdk\Model\Payment;
+use Aledaas\StellarSdk\Server;
+use Aledaas\StellarSdk\Model\Payment;
 
 $server = Server::testNet();
 

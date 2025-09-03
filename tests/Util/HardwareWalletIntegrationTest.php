@@ -1,12 +1,12 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\Util;
+namespace Aledaas\StellarSdk\Test\Util;
 
 
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\Signing\PrivateKeySigner;
-use ZuluCrypto\StellarSdk\Signing\TrezorSigner;
+use Aledaas\StellarSdk\Keypair;
+use Aledaas\StellarSdk\Signing\PrivateKeySigner;
+use Aledaas\StellarSdk\Signing\TrezorSigner;
 
 /**
  * ## Executing Tests
