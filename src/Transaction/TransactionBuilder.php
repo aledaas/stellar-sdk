@@ -646,4 +646,9 @@ class TransactionBuilder implements XdrEncodableInterface
 
         return $this->addOperation($paymentOp);
     }
+
+    protected function toStroopAmount($amount): BigInteger
+{
+    return (new StellarAmount($amount))->getUnscaledBigInteger();
+}
 }
