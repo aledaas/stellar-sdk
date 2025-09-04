@@ -706,6 +706,12 @@ class TransactionBuilder implements XdrEncodableInterface
         return $this->appendOperation($operation);
     }
 
+    public function appendOperation($operation): self
+    {
+        $this->operations->append($operation);
+        return $this;
+    }
+
     public function toPriceFraction(string $decimal): Price
     {
         $scale = 10000000; // precisión máxima usada por Stellar
