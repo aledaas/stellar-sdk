@@ -31,6 +31,7 @@ use Aledaas\StellarSdk\XdrModel\Operation\ManageDataOp;
 use Aledaas\StellarSdk\XdrModel\Operation\Operation;
 use Aledaas\StellarSdk\XdrModel\Operation\PaymentOp;
 use Aledaas\StellarSdk\XdrModel\Operation\SetOptionsOp;
+use Aledaas\StellarSdk\XdrModel\Operation\ManageOfferOp;
 use Aledaas\StellarSdk\XdrModel\Signer;
 use Aledaas\StellarSdk\XdrModel\SignerKey;
 use Aledaas\StellarSdk\XdrModel\TimeBounds;
