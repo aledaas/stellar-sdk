@@ -654,12 +654,13 @@ class TransactionBuilder implements XdrEncodableInterface
     }
    
    public function appendManageSellOfferOp(
-        string $sellingAssetCode,
-        string $sellingAssetIssuer,
-        string $buyingAssetCode,
-        ?string $buyingAssetIssuer,
-        string $amount,
-        string $price
+    string $sellingAssetCode,
+    string $sellingAssetIssuer,
+    string $buyingAssetCode,
+    ?string $buyingAssetIssuer,
+    string $amount,
+    string $price,
+    int $offerId = 0 // por defecto es 0, o sea, una nueva oferta
     ): self {
         $sellingAsset = Asset::newCustomAsset($sellingAssetCode, $sellingAssetIssuer);
 
@@ -672,11 +673,62 @@ class TransactionBuilder implements XdrEncodableInterface
             $buyingAsset,
             $this->toStroopAmount($amount),
             $this->toPriceFraction($price),
-            0 // offerId = 0 -> nueva oferta
+            $offerId
         );
 
         $operation = new Operation(Operation::TYPE_MANAGE_OFFER, null, $opBody);
 
         return $this->appendOperation($operation);
+    }
+
+    public function appendManageBuyOfferOp(
+    string $buyingAssetCode,
+    ?string $buyingAssetIssuer,
+    string $sellingAssetCode,
+    string $sellingAssetIssuer,
+    string $amount,
+    string $price,
+    int $offerId = 0 // por defecto es 0, o sea, una nueva oferta
+    ): self {
+        $buyingAsset = $buyingAssetCode === 'XLM'
+            ? Asset::newNativeAsset()
+            : Asset::newCustomAsset($buyingAssetCode, $buyingAssetIssuer);
+
+        $sellingAsset = Asset::newCustomAsset($sellingAssetCode, $sellingAssetIssuer);
+
+        $opBody = new ManageOfferOp(
+            $sellingAsset,
+            $buyingAsset,
+            $this->toStroopAmount($amount),
+            $this->toPriceFraction($price),
+            $offerId
+        );
+
+        $operation = new Operation(Operation::TYPE_MANAGE_OFFER, null, $opBody);
+
+        return $this->appendOperation($operation);
+    }
+
+    public function toPriceFraction(string $price): array
+    {
+        // Convertir el precio decimal en fracción
+        $float = (float) $price;
+
+        // Limitar la precisión a evitar floats largos
+        $precision = 1e7;
+        $numerator = (int) round($float * $precision);
+        $denominator = (int) $precision;
+
+        // Reducir la fracción al mínimo (opcional)
+        $gcd = function($a, $b) use (&$gcd) {
+            return ($b == 0) ? $a : $gcd($b, $a % $b);
+        };
+
+        $divisor = $gcd($numerator, $denominator);
+
+        return [
+            'n' => (int) ($numerator / $divisor),
+            'd' => (int) ($denominator / $divisor)
+        ];
     }
 }
