@@ -648,7 +648,32 @@ class TransactionBuilder implements XdrEncodableInterface
     }
 
     protected function toStroopAmount($amount): BigInteger
-{
-    return (new StellarAmount($amount))->getUnscaledBigInteger();
-}
+    {
+        return (new StellarAmount($amount))->getUnscaledBigInteger();
+    }
+   
+    public function appendManageSellOfferOp(
+        string $sellingAssetCode,
+        string $sellingAssetIssuer,
+        string $buyingAssetCode,
+        ?string $buyingAssetIssuer,
+        string $amount,
+        string $price
+    ): self {
+        $sellingAsset = Asset::newCustomAsset($sellingAssetCode, $sellingAssetIssuer);
+
+        $buyingAsset = $buyingAssetCode === 'XLM'
+            ? Asset::newNativeAsset()
+            : Asset::newCustomAsset($buyingAssetCode, $buyingAssetIssuer);
+
+        $operation = Operation::manageSellOffer(
+            $sellingAsset,
+            $buyingAsset,
+            $this->toStroopAmount($amount),
+            $price,
+            0 // offerId = 0 -> nueva oferta
+        );
+
+        return $this->appendOperation($operation);
+    }
 }
