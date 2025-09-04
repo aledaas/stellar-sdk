@@ -36,6 +36,7 @@ use Aledaas\StellarSdk\XdrModel\Signer;
 use Aledaas\StellarSdk\XdrModel\SignerKey;
 use Aledaas\StellarSdk\XdrModel\TimeBounds;
 use Aledaas\StellarSdk\XdrModel\TransactionEnvelope;
+use Aledaas\StellarSdk\XdrModel\Price;
 
 
 /**
@@ -709,26 +710,23 @@ class TransactionBuilder implements XdrEncodableInterface
         return $this->appendOperation($operation);
     }
 
-    public function toPriceFraction(string $price): array
+    public function toPriceFraction(string $decimal): Price
     {
-        // Convertir el precio decimal en fracción
-        $float = (float) $price;
+        $scale = 10000000; // precisión máxima usada por Stellar
+        $float = (float)$decimal;
 
-        // Limitar la precisión a evitar floats largos
-        $precision = 1e7;
-        $numerator = (int) round($float * $precision);
-        $denominator = (int) $precision;
+        $numerator = (int) round($float * $scale);
+        $denominator = $scale;
 
-        // Reducir la fracción al mínimo (opcional)
-        $gcd = function($a, $b) use (&$gcd) {
+        // Simplificar fracción
+        $gcd = function ($a, $b) use (&$gcd) {
             return ($b == 0) ? $a : $gcd($b, $a % $b);
         };
 
         $divisor = $gcd($numerator, $denominator);
+        $numerator = (int) ($numerator / $divisor);
+        $denominator = (int) ($denominator / $divisor);
 
-        return [
-            'n' => (int) ($numerator / $divisor),
-            'd' => (int) ($denominator / $divisor)
-        ];
+        return new Price($numerator, $denominator);
     }
 }
