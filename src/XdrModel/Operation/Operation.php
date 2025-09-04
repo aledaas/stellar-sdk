@@ -59,6 +59,8 @@ abstract class Operation implements XdrEncodableInterface
      */
     protected $type;
 
+    protected $body;
+
     /**
      * Operation constructor.
      *
@@ -66,7 +68,7 @@ abstract class Operation implements XdrEncodableInterface
      * @param $sourceAccountId AccountId if null this will default to the source for the transaction
      * @return Operation
      */
-    public function __construct($type, $sourceAccountId = null)
+    public function __construct($type, $sourceAccountId = null, $body = null)
     {
         if ($sourceAccountId instanceof Keypair) {
             $sourceAccountId = new AccountId($sourceAccountId->getPublicKey());
@@ -77,6 +79,7 @@ abstract class Operation implements XdrEncodableInterface
 
         $this->sourceAccount = $sourceAccountId;
         $this->type = $type;
+        $this->body = $body;
 
         return $this;
     }
@@ -96,6 +99,9 @@ abstract class Operation implements XdrEncodableInterface
 
         // Type
         $bytes .= XdrEncoder::unsignedInteger($this->type);
+
+        // Body
+        $bytes .= $this->body->toXdr();
 
         return $bytes;
     }
