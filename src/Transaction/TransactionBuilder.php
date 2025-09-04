@@ -652,7 +652,7 @@ class TransactionBuilder implements XdrEncodableInterface
         return (new StellarAmount($amount))->getUnscaledBigInteger();
     }
    
-    public function appendManageSellOfferOp(
+   public function appendManageSellOfferOp(
         string $sellingAssetCode,
         string $sellingAssetIssuer,
         string $buyingAssetCode,
@@ -666,13 +666,15 @@ class TransactionBuilder implements XdrEncodableInterface
             ? Asset::newNativeAsset()
             : Asset::newCustomAsset($buyingAssetCode, $buyingAssetIssuer);
 
-        $operation = Operation::manageSellOffer(
+        $opBody = new ManageOfferOp(
             $sellingAsset,
             $buyingAsset,
             $this->toStroopAmount($amount),
-            $price,
+            $this->toPriceFraction($price),
             0 // offerId = 0 -> nueva oferta
         );
+
+        $operation = new Operation(Operation::TYPE_MANAGE_OFFER, null, $opBody);
 
         return $this->appendOperation($operation);
     }
