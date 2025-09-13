@@ -3,7 +3,7 @@
 require __DIR__ . '/../vendor/autoload.php';
 
 // See 01-create-account.php for where this was generated
-$publicAccountId = 'GCFXHS4GXL6BVUCXBWXGTITROWLVYXQKQLF4YH5O5JT3YZXCYPAFBJZB';
+$publicAccountId = 'GDFCWF4CYQR53RTBYC5R33UVKGZNDYXABRQYNJLEZ4QYY6EYCOROYIO2';
 
 // Use the testnet friendbot to add funds:
 $response = file_get_contents('https://horizon-testnet.stellar.org/friendbot?addr=' . $publicAccountId);
