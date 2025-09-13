@@ -130,6 +130,16 @@ class StellarAmount
     }
 
     /**
+     * Alias for getScaledValue(), returns the value in XLM as a string with 7 decimals
+     *
+     * @return string
+     */
+    public function toDecimal(): string
+    {
+        return $this->getScaledValue();
+    }
+
+    /**
      * Returns the raw value in stroops as a string
      *
      * @return string
@@ -137,6 +147,16 @@ class StellarAmount
     public function getUnscaledString()
     {
         return $this->stroops->toString();
+    }
+
+    /**
+     * Alias for getUnscaledString(), returns raw value in stroops as string
+     *
+     * @return string
+     */
+    public function getRawStroopValue(): string
+    {
+        return $this->getUnscaledString();
     }
 
     /**
