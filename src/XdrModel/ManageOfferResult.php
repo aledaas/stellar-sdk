@@ -3,6 +3,7 @@
 
 namespace Aledaas\StellarSdk\XdrModel;
 
+use Aledaas\StellarSdk\Model\StellarAmount;
 use Aledaas\StellarSdk\Xdr\XdrBuffer;
 
 class ManageOfferResult extends OperationResult
@@ -38,6 +39,10 @@ class ManageOfferResult extends OperationResult
      * @var OfferEntry
      */
     protected $offer;
+    /**
+     * @var StellarAmount
+     */
+    protected $sellingAmount;
 
     /**
      * @deprecated Do not call this method directly. Instead, use OperationResult::fromXdr
@@ -121,5 +126,14 @@ class ManageOfferResult extends OperationResult
     public function setOffer($offer)
     {
         $this->offer = $offer;
+    }
+    public function getSellingAmountAsStroops(): string
+    {
+        return $this->sellingAmount->getRawStroopValue();
+    }
+
+    public function getSellingAmountAsDecimal(): string
+    {
+        return $this->sellingAmount->toDecimal();
     }
 }
