@@ -635,7 +635,8 @@ class TransactionBuilder implements XdrEncodableInterface
     }
     public function build()
     {
-        return $this->getTransactionEnvelope();
+        $this->getTransactionEnvelope(); // Esto asegura que se haya construido
+        return $this;
     }
     public function appendPayment(string $destination, string $assetCode, string $issuer, string $amount, $sourceAccountId = null)
     {
