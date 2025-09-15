@@ -755,10 +755,10 @@ class TransactionBuilder implements XdrEncodableInterface
         // Crear la operación PathPaymentOp
         $op = new PathPaymentOp(
             sendAsset: $sendAsset,
-            sendMax: (float) $maxSendAmount,
+            sendMax: $maxSendAmount,
             destinationAccountId: $destination,
             destinationAsset: $destAsset,
-            destinationAmount: (float) $destAmount,
+            destinationAmount: $destAmount,
             sourceAccountId: null
         );
 
