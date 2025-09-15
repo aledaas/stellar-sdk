@@ -199,7 +199,6 @@ class XdrBuffer
     {
         if ($this->position + $numBytes > $this->size) {
 
-            if ($this->position + $numBytes > $this->size) {
                 // Debug directo a archivo
                 file_put_contents(
                     base_path('storage/logs/xdr-buffer-error.json'),
@@ -212,12 +211,12 @@ class XdrBuffer
                     ], JSON_PRETTY_PRINT)
                 );
 
-            throw new \ErrorException(
-                "❌ Unexpected end of XDR data.\n".
-                "Trying to read {$numBytes} bytes at position {$this->position}, ".
-                "but total size is {$this->size}."
-            );
-        }
+                throw new \ErrorException(
+                    "❌ Unexpected end of XDR data.\n" .
+                    "Trying to read {$numBytes} bytes at position {$this->position}, " .
+                    "but total size is {$this->size}."
+                );
+            }
     }
 
     /**
