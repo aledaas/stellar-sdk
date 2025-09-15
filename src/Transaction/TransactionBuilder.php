@@ -3,6 +3,7 @@
 
 namespace Aledaas\StellarSdk\Transaction;
 
+use Aledaas\StellarSdk\XdrModel\Operation\PathPaymentOp;
 use phpseclib3\Math\BigInteger;
 use Aledaas\StellarSdk\Horizon\Api\PostTransactionResponse;
 use Aledaas\StellarSdk\Horizon\ApiClient;
@@ -653,7 +654,7 @@ class TransactionBuilder implements XdrEncodableInterface
     {
         return (new StellarAmount($amount))->getUnscaledBigInteger();
     }
-   
+
    public function appendManageSellOfferOp(
     string $sellingAssetCode,
     string $sellingAssetIssuer,
@@ -731,4 +732,40 @@ class TransactionBuilder implements XdrEncodableInterface
 
         return new Price($numerator, $denominator);
     }
+
+    public function appendPathPaymentStrictReceiveOp(
+        string $destination,
+        string $sendAssetCode,
+        ?string $sendAssetIssuer,
+        string $destAssetCode,
+        ?string $destAssetIssuer,
+        string $destAmount,
+        string $maxSendAmount = '999999999'
+    ): self {
+        // Construir Asset de origen (el que estás dispuesto a pagar)
+        $sendAsset = empty($sendAssetIssuer)
+            ? new Asset(type: Asset::TYPE_NATIVE)
+            : Asset::newCustomAsset($sendAssetCode, $sendAssetIssuer);
+
+        // Construir Asset de destino (el que querés recibir)
+        $destAsset = empty($destAssetIssuer)
+            ? new Asset(type: Asset::TYPE_NATIVE)
+            : Asset::newCustomAsset($destAssetCode, $destAssetIssuer);
+
+        // Crear la operación PathPaymentOp
+        $op = new PathPaymentOp(
+            sendAsset: $sendAsset,
+            sendMax: (float) $maxSendAmount,
+            destinationAccountId: $destination,
+            destinationAsset: $destAsset,
+            destinationAmount: (float) $destAmount,
+            sourceAccountId: null
+        );
+
+        // Agregar a la transacción
+        $this->appendOperation($op);
+
+        return $this;
+    }
+
 }
