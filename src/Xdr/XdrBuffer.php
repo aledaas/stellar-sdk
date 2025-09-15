@@ -198,7 +198,11 @@ class XdrBuffer
     protected function assertBytesRemaining($numBytes)
     {
         if ($this->position + $numBytes > $this->size) {
-            throw new \ErrorException('Unexpected end of XDR data');
+            throw new \ErrorException(
+                "❌ Unexpected end of XDR data.\n".
+                "Trying to read {$numBytes} bytes at position {$this->position}, ".
+                "but total size is {$this->size}."
+            );
         }
     }
 

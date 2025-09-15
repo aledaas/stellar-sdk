@@ -742,6 +742,7 @@ class TransactionBuilder implements XdrEncodableInterface
         string $destAmount,
         string $maxSendAmount = '999999999'
     ): self {
+
         // Construir Asset de origen (el que estás dispuesto a pagar)
         $sendAsset = empty($sendAssetIssuer)
             ? new Asset(type: Asset::TYPE_NATIVE)
