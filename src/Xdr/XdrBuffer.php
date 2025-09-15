@@ -198,6 +198,20 @@ class XdrBuffer
     protected function assertBytesRemaining($numBytes)
     {
         if ($this->position + $numBytes > $this->size) {
+
+            if ($this->position + $numBytes > $this->size) {
+                // Debug directo a archivo
+                file_put_contents(
+                    base_path('storage/logs/xdr-buffer-error.json'),
+                    json_encode([
+                        'position' => $this->position,
+                        'numBytes' => $numBytes,
+                        'size' => $this->size,
+                        'xdr_base64' => base64_encode($this->xdrBytes),
+                        'xdr_hex' => bin2hex($this->xdrBytes),
+                    ], JSON_PRETTY_PRINT)
+                );
+
             throw new \ErrorException(
                 "❌ Unexpected end of XDR data.\n".
                 "Trying to read {$numBytes} bytes at position {$this->position}, ".
