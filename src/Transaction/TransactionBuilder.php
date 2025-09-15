@@ -763,6 +763,7 @@ class TransactionBuilder implements XdrEncodableInterface
             sourceAccountId: null
         );
 
+        $op->setPaths([]);
         // Agregar a la transacción
         $this->appendOperation($op);
 
